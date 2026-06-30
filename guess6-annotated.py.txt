@@ -1,0 +1,20 @@
+### m08/guess6.py.txt
+S    import random
+
+S    secret = random.randint(1, 100)
+
+C    while True:   # our game loop
+C        while True:
+C            try:
+C                guess = int(input('Please input your guess: '))
+C                break
+C            except ValueError:
+C                print('Guesses must be an integer. Try again...')
+
+S        if guess == secret:
+S            print('Exactly! You win!')
+C            break
+S        elif guess < secret:
+S            print('Too small!')
+S        else:
+S            print('Too big!')
